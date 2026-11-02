@@ -1,0 +1,16 @@
+{
+  "bind_host": "0.0.0.0",
+  "bind_port": 8080,
+  "backends": [
+    {"host": "127.0.0.1", "port": 9001, "weight": 1},
+    {"host": "127.0.0.1", "port": 9002, "weight": 1},
+    {"host": "127.0.0.1", "port": 9003, "weight": 1}
+  ],
+  "health_check": {
+    "interval_seconds": 2.0,
+    "timeout_seconds": 1.0,
+    "rise_threshold": 2,
+    "fall_threshold": 2
+  },
+  "connection_timeout": 5.0
+}
